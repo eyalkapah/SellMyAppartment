@@ -1,0 +1,19 @@
+﻿@page "/pictures"
+
+@for (var i = 1; i < 22; i++)
+{
+    var name = $"image{i}.jpeg";
+
+    <div class="responsive">
+        <div class="gallery">
+            <a target="_blank" href="images/home/@name">
+                <img src="images/home/@name" alt="Mountains" width="600" height="400">
+            </a>
+            
+        </div>
+    </div>
+}
+
+@code {
+
+}

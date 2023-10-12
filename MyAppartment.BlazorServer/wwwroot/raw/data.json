@@ -1,0 +1,124 @@
+{
+  "main": {
+    "street_name": "הבעל שם טוב 16",
+    "neighborhood": "מחנה יהודה",
+    "city": "פתח תקווה"
+  },
+  "top_summary": {
+    "type": "דירה",
+    "rooms": 4,
+    "floor": "קומה 4 מתוך 5",
+    "size": "92 מ\"ר",
+    "extra": [
+      "פינוי אפריל 24"
+    ]
+  },
+  "price": {
+    "value": 2480000,
+    "currency": "₪"
+  },
+  "description": "רחוב חד סטרי שקט מאוד עם המון חנייה ברחוב עצמו. כל השדרה חדשה ולא צפוייה בנייה נוספת! דירת 4 חדרים ענקית. כ-96 מ\"ר בנוי + מחסן שהוסב לטובת פינת אוכל. בבניין חדש משנת 2014 נבנה על ידי לא אחר מחיים שמי, הקבלן המוכר בפ\"ת. מרפסת שמש של כ- 12 מ״ר. חנייה בטאבו (ניתן להחנות שני רכבים)",
+  "details": [
+    "מיזוג",
+    "מעלית",
+    "מרפסת שמש",
+    "חנייה",
+    "ממ\"ד",
+    "דלתות משודרגות",
+    "מטבח משודרג"
+  ],
+  "additional_data": [
+    "ועד בית - 300 ש\"ח בחודש",
+    "ארנונה - 1000 ש\"ח בחודשיים"
+  ],
+  "images": [
+    {
+      "name": "image1.jpeg",
+      "description": "סלון ופינת אוכל"
+    },
+    {
+      "name": "image2.jpeg",
+      "description": "סלון ופינת אוכל"
+    },
+    {
+      "name": "image3.jpeg",
+      "description": "סלון ופינת אוכל"
+    },
+    {
+      "name": "image4.jpeg",
+      "description": "סלון ופינת אוכל"
+    },
+    {
+      "name": "image5.jpeg",
+      "description": "סלון ופינת אוכל"
+    },
+    {
+      "name": "image6.jpeg",
+      "description": "סלון ופינת אוכל"
+    },
+    {
+      "name": "image7.jpeg",
+      "description": "סלון ופינת אוכל"
+    },
+    {
+      "name": "image8.jpeg",
+      "description": "סלון ופינת אוכל"
+    },
+    {
+      "name": "image9.jpeg",
+      "description": "סלון ופינת אוכל"
+    },
+    {
+      "name": "image10.jpeg",
+      "description": "סלון ופינת אוכל"
+    },
+    {
+      "name": "image11.jpeg",
+      "description": "סלון ופינת אוכל"
+    },
+    {
+      "name": "image12.jpeg",
+      "description": "סלון ופינת אוכל"
+    },
+    {
+      "name": "image13.jpeg",
+      "description": "סלון ופינת אוכל"
+    },
+    {
+      "name": "image14.jpeg",
+      "description": "סלון ופינת אוכל"
+    },
+    {
+      "name": "image15.jpeg",
+      "description": "סלון ופינת אוכל"
+    },
+    {
+      "name": "image16.jpeg",
+      "description": "סלון ופינת אוכל"
+    },
+    {
+      "name": "image17.jpeg",
+      "description": "סלון ופינת אוכל"
+    },
+    {
+      "name": "image18.jpeg",
+      "description": "סלון ופינת אוכל"
+    },
+    {
+      "name": "image19.jpeg",
+      "description": "סלון ופינת אוכל"
+    },
+    {
+      "name": "image20.jpeg",
+      "description": "סלון ופינת אוכל"
+    },
+    {
+      "name": "image21.jpeg",
+      "description": "סלון ופינת אוכל"
+    },
+    {
+      "name": "image22.jpeg",
+      "description": "סלון ופינת אוכל"
+    }
+  ]
+}

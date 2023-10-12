@@ -1,0 +1,92 @@
+﻿@page "/"
+@using System.Text.Json
+@using MyAppartment.Maui.Data
+
+@inject IStringLocalizer<Resources> Localizer
+@inject HttpClient Http
+
+
+
+<div class="address_main">@_userData?.Main?.StreetName</div>
+<div class="address_subtitle">@($"{_userData?.Main?.Neighborhood}, {_userData?.Main?.City}")</div>
+
+<div class="top_summary_container">
+    <i class="fa-sharp fa-solid fa-building"></i>
+    <div class="summary_item">@_userData?.TopSummary?.Type</div>
+    <div class="summary_separator_item">|</div>
+    <i class="fa-sharp fa-solid fa-bed"></i>
+    <div class="summary_item">@($"{_userData?.TopSummary?.Rooms} {Localizer["Rooms"]}")</div>
+    <div class="summary_separator_item">|</div>
+    <i class="fa-sharp fa-solid fa-stairs"></i>
+    <div class="summary_item">@_userData?.TopSummary?.Floor</div>
+    <div class="summary_separator_item">|</div>
+    <i class="fa-sharp fa-solid fa-maximize"></i>
+    <div class="summary_item">@_userData?.TopSummary?.Size</div>
+
+    @if (_userData != null)
+    {
+        @foreach (var item in _userData.TopSummary?.Extra)
+        {
+            <div class="summary_separator_item">|</div>
+            <div class="summary_item">@item</div>
+        }
+    }
+
+</div>
+
+<div class="price_container">@($"{_userData?.Price.Value:N0} {_userData?.Price.Currency}")</div>
+
+<div class="description_title top-row">@Localizer["PropertyDescription"]</div>
+<div class="description_text">@_userData?.Description</div>
+
+<div class="specification_title top-row">@Localizer["PropertyDetails"]</div>
+
+@if (_userData?.Details != null)
+{
+    <div class="specification_container">
+        @foreach (var item in _userData?.Details)
+        {
+            <div class="specification_item">@item</div>
+        }
+    </div>
+}
+
+@if (_userData?.AdditionalData != null)
+{
+    <div class="additional_data_title">@Localizer["AdditionalData"]</div>
+
+    <ul>
+        @foreach (var item in _userData?.AdditionalData)
+        {
+            <li>@item</li>
+        }
+    </ul>
+}
+
+@code
+{
+    private UserData _userData { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        // _userData = new UserData
+        // {
+        //     StreetName = "test"
+        // };
+
+        _userData = await ReadData();
+        //var str  = await Http.GetStringAsync("raw/data.json");
+        //_userData = await Http.GetFromJsonAsync<UserData>("raw/data.json");
+        // var userData = await Http.GetFromJsonAsync<UserData>("data.json");
+    }
+
+    private static async Task<UserData> ReadData()
+    {
+        await using var stream = await FileSystem.OpenAppPackageFileAsync("wwwroot/raw/data.json");
+        using var reader = new StreamReader(stream);
+
+        var text = await reader.ReadToEndAsync();
+
+        return JsonSerializer.Deserialize<UserData>(text);
+    }
+}
